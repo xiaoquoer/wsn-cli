@@ -1,0 +1,91 @@
+@import "./normalize.css";
+:root {
+    --color-text: #ffffff;
+    --color-high-text: #4ba4ee;
+    --color-tint: #c3babc;
+    --color-background: rgb(239, 240, 245);
+    --font-size: 18px;
+    --line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Arial", "sans-serif";
+    /* user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+    -webkit-tap-highlight-color: transparent;
+    /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+    background: var(--color-background);
+    color: var(--color-text);
+    /* rem vw/vh */
+    width: 100vw;
+    height: 100vh;
+    -webkit-user-select: text;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.clear-fix::after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear-fix {
+    zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+/*定义了滚动条整体样式；*/
+
+::-webkit-scrollbar {
+    height: 5px !important;
+    width: 5px !important;
+}
+
+
+/*定义了滚动条滑块的样式*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    border-style: dashed;
+    /* background-color: rgba(12, 80, 235, 0.4); */
+    background-color: #0000003b;
+    border-color: #e2242400;
+    border-width: 1.5px;
+    background-clip: padding-box;
+}
+
+
+/*定义了轨道的样式*/
+
+::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(157, 165, 183, 0.7);
+}
