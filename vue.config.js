@@ -1,7 +1,11 @@
-/*
-访问文件别名配置
-*/
 module.exports = {
+	// 配置打包路径
+	runtimeCompiler: true,
+	publicPath: './', // 设置打包文件相对路径
+	outputDir: 'dist',
+	/*
+	访问文件别名配置
+	*/
   configureWebpack: {
     resolve: {
       alias: {
